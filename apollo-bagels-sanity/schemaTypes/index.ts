@@ -40,6 +40,7 @@ import {shopifyCollectionType} from './objects/shopify/shopifyCollectionType'
 import {shopifyProductType} from './objects/shopify/shopifyProductType'
 import {shopifyProductVariantType} from './objects/shopify/shopifyProductVariantType'
 import {spotType} from './objects/hotspot/spotType'
+import { announcementType } from './newTypes/announcementType'
 
 // Objects used as annotations must be imported first
 const annotations = [linkEmailType, linkExternalType, linkInternalType, linkProductType]
@@ -47,6 +48,7 @@ const annotations = [linkEmailType, linkExternalType, linkInternalType, linkProd
 const objects = [
   accordionGroupType,
   accordionType,
+  announcementType,
   calloutType,
   callToActionType,
   collectionGroupType,
