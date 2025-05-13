@@ -15,7 +15,52 @@ export const homeType = defineField({
       name: 'hero',
       type: 'hero',
       group: 'editorial',
+    }),defineField({
+      name: 'shopMensImage',
+      title: "Shop Men's Image",
+      type: 'object',
+      group: 'editorial',
+      fields: [
+        defineField({
+          name: 'image',
+          type: 'image',
+          title: 'Image',
+          options: {
+            hotspot: true,
+          },
+          validation: Rule => Rule.required(),
+        }),
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+          description: 'Alternative text for accessibility',
+        }),
+      ],
     }),
+    defineField({
+      name: 'shopWomensImage',
+      title: "Shop Women's Image",
+      type: 'object',
+      group: 'editorial',
+      fields: [
+        defineField({
+          name: 'image',
+          type: 'image',
+          title: 'Image',
+          options: {
+            hotspot: true,
+          },
+          validation: Rule => Rule.required(),
+        }),
+        defineField({
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+          description: 'Alternative text for accessibility',
+        }),
+      ],
+    }),    
     defineField({
       name: 'sections',
       title: 'Sections',
