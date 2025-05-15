@@ -15,7 +15,34 @@ export const homeType = defineField({
       name: 'hero',
       type: 'hero',
       group: 'editorial',
-    }),defineField({
+    }),
+    defineField({
+      name: 'comingSoon',
+      title: 'Coming Soon',
+      type: 'boolean',
+      group: 'editorial',
+      description: 'Enable coming soon mode for the homepage',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'comingSoonVideo',
+      title: 'Coming Soon Video',
+      type: 'file',
+      group: 'editorial',
+      description: 'Video to display when coming soon mode is enabled',
+      options: {
+        accept: 'video/*'
+      },
+      hidden: ({parent}) => !parent?.comingSoon,
+      validation: Rule => Rule.custom((value, context) => {
+        // If coming soon is true, video is required
+        if (context.parent?.comingSoon && !value) {
+          return 'Video is required when Coming Soon is enabled';
+        }
+        return true;
+      })
+    }),
+    defineField({
       name: 'shopMensImage',
       title: "Shop Men's Image",
       type: 'object',
