@@ -46,9 +46,10 @@ export const structure: StructureResolver = (S, context) =>
     .title('Content')
     .items([
       home(S, context),
-      pages(S, context),
+      // pages(S, context),
       S.divider(),
       collections(S, context),
+      S.divider(),
       products(S, context),
       S.divider(),
       colorThemes(S, context),
