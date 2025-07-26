@@ -105,6 +105,12 @@ export const homeType = defineField({
               type: 'string',
             }),
             defineField({
+              name: 'handle',
+              title: 'Handle',
+              type: 'string',
+              description: 'Used for generating navigational links'
+            }),
+            defineField({
               name: 'description',
               title: 'Description',
               type: 'text',
