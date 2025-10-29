@@ -87,7 +87,23 @@ export const homeType = defineField({
           description: 'Alternative text for accessibility',
         }),
       ],
-    }),    
+    }),
+    defineField({
+      name: 'collectionsGrid',
+      type:'array',
+      group: 'editorial',
+      of:[
+        defineArrayMember({
+          type:'object',
+          name: 'collection',
+          fields:[
+            {name: 'title', type: 'string'},
+            {name:'image', type:'image'},
+            {name: 'handle', type: 'string'}
+          ]
+        })
+      ]
+    }),
     defineField({
       name: 'sections',
       title: 'Sections',

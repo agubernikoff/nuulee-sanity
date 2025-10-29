@@ -15,7 +15,7 @@ const devOnlyPlugins = [visionTool()]
 
 export default defineConfig({
   name: 'default',
-  title: 'Shopify - 4qgeus-k0',
+  title: 'Nuulee',
 
   projectId: 'hj7h0g6k',
   dataset: 'production',
