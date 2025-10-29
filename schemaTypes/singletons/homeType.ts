@@ -174,7 +174,23 @@ export const homeType = defineField({
                   ]
                 })
               ]
-            })
+            }),
+            defineField({
+              name: 'title2',
+              title: 'Title2',
+              type: 'string',
+            }),
+            defineField({
+              name: 'handle2',
+              title: 'Handle2',
+              type: 'string',
+              description: 'Used for generating navigational links'
+            }),
+            defineField({
+              name: 'description2',
+              title: 'Description2',
+              type: 'text',
+            }),
           ],
           preview: {
             select: {
